@@ -33,7 +33,7 @@ jobs:
 
       - name: check
         run: |
-          nc -zv localhost 9999 || (echo "端口 9999 未监听" && exit 1)
+          ss -ltn | grep ':9999 ' || (echo "端口 9999 未监听" && exit 1)
 
       - name: test
         run: go test -v ./...
