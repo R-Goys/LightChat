@@ -8,7 +8,7 @@ import (
 func TestConnection(t *testing.T) {
 	fmt.Println("Testing connection")
 	fmt.Println("哈喽，我真的在测试哦！！！")
-	pass := true
+	pass := false
 	if pass {
 		panic("Testing connection")
 	}

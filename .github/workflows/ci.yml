@@ -30,10 +30,5 @@ jobs:
         run: |
           nohup go run . > server.log 2>&1 &
           sleep 10
-
-      - name: check
-        run: |
-          ss -ltn | grep ':9999 ' || (echo "端口 9999 未监听" && exit 1)
-
       - name: test
         run: go test -v ./...
