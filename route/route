@@ -1,0 +1,9 @@
+package route
+
+import "net/http"
+
+func InitRoute() {
+	http.HandleFunc("/chat", chatHandler)
+
+	http.ListenAndServe(":9999", nil)
+}
