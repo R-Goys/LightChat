@@ -27,7 +27,7 @@ jobs:
       - name: Start
         run: |
           nohup go run . > server.log 2>&1 &
-          sleep 5
+          sleep 10
       - name: check
         run: |
           curl --fail http://localhost:9999/ || (echo "服务未启动" && exit 1)
