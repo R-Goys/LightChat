@@ -30,7 +30,7 @@ jobs:
           sleep 10
       - name: check
         run: |
-          curl --fail http://localhost:9999/ || (echo "服务未启动" && exit 1)
+          curl --fail ws://localhost:9999/ || (echo "服务未启动" && exit 1)
       - name: Test
         run: |
           go test -v ./...
