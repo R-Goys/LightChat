@@ -48,7 +48,7 @@ func (s *ServerConn) Broadcast(From string, msg []byte) []error {
 	return errs
 }
 
-func (s *ServerConn) SoloChat(From string, To string, msg []byte) bool {
+func (s *ServerConn) SoloChat(From, To string, msg []byte) bool {
 	Msg := message{
 		From: From,
 		Msg:  string(msg),
